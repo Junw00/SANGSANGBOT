@@ -59,7 +59,7 @@ if x == 'start':
         print("id= " + random_id + " / name= " + name)
         # 신규 URL
         R_URL = link + '?email=' + random_id + '@ebsoc.co.kr' + '&id=' + random_id + '&integrationname=' + integrationname + '&name=' + name + '&grade=' + grade + '&type=' + type + '&host=' + host + '&atnlcNo=' + atnlcNo + '&lctreSn=' + lctreSn + '&userSn=' + userSn
-        driver.execute_script("window.open('" + "http://junu55792.dothome.co.kr/ebs/index.html" + "','_blank')") # 새탭 오픈
+        driver.execute_script("window.open('" + R_URL + "','_blank')") # 새탭 오픈
         
         driver.switch_to.window(driver.window_handles[-1]) # 탭 이동
 
