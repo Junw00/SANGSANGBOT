@@ -33,8 +33,6 @@ atnlcNo = config['OnLineClass']['atnlcNo']
 lctreSn = config['OnLineClass']['lctreSn']
 userSn = config['OnLineClass']['userSn']
 count = config['OnLineClass']['count']
-proxy = config['OnLineClass']['proxy']
-proxyurl = config['OnLineClass']['proxyurl']
 auto_entry = config['OnLineClass']['auto_entry']
 
 # count에 수를 string 에서 int로 변환
