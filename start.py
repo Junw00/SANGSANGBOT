@@ -35,6 +35,7 @@ userSn = config['OnLineClass']['userSn']
 count = config['OnLineClass']['count']
 proxy = config['OnLineClass']['proxy']
 proxyurl = config['OnLineClass']['proxyurl']
+auto_entry = config['OnLineClass']['auto_entry']
 
 # count에 수를 string 에서 int로 변환
 n = int(count)
@@ -44,7 +45,7 @@ n = int(count)
 
 
 driver = webdriver.Chrome(executable_path='chromedriver')
-driver.get("chrome://settings/content")
+driver.get("chrome://settings/content") # 크롬 설정 페이지 오픈
 
 driver.implicitly_wait(3)
 
@@ -61,10 +62,11 @@ if x == 'start':
         # 신규 URL
         R_URL = link + '?email=' + random_id + '@ebsoc.co.kr' + '&id=' + random_id + '&integrationname=' + integrationname + '&name=' + name + '&grade=' + grade + '&type=' + type + '&host=' + host + '&atnlcNo=' + atnlcNo + '&lctreSn=' + lctreSn + '&userSn=' + userSn
         driver.execute_script("window.open('" + R_URL + "','_blank')") # 새탭 오픈
-        driver.implicitly_wait(3)
 
-        element = driver.find_element_by_class_name('start-button-text')
-        element.click() # 입장 버튼 클릭
+        if auto_entry == "yes": # 자동 입장이 설정되있는지 확인
+            driver.implicitly_wait(3)
+            element = driver.find_element_by_class_name('start-button-text')
+            element.click() # 입장 버튼 클릭
 
         index += 1 
 
