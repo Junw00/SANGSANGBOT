@@ -41,6 +41,16 @@
 	pip install configparser
 	pip install random2
 	
+### 실행방법
+	1. 자신의 크롬 버전에 맞는 크롬 드라이버 다운로드후 start.py와 같은 디렉토리에 위치
+	2. start.py 실행
+	3. chrome://settings/content 페이지 로드
+	4. 권한 - 카메라 '액세스하기 전에 확인(권장)' 클릭하여 카메라 차단
+	5. 권한 - 마이크 '액세스하기 전에 확인(권장)' 클릭하여 마이크 차단
+	6. 'start' 입력
+	7. 종료시 'end' 입력
+
+
 # 할일
 
 - [X] 자동 입장 코드 수정 **(중요)**
