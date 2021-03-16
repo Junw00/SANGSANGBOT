@@ -38,8 +38,8 @@ auto_entry = config['OnLineClass']['auto_entry']
 # count에 수를 string 에서 int로 변환
 n = int(count)
 
-# URL 설정
-#URL = link + '?email=' + email + '&id=' + id + '&integrationname=' + integrationname + '&name=' + name + '&grade=' + grade + '&type=' + type + '&host=' + host + '&atnlcNo=' + atnlcNo + '&lctreSn=' + lctreSn + '&userSn=' + userSn
+# 접속 URL 구조
+URL = link + '?email=' + email + '&id=' + id + '&integrationname=' + integrationname + '&name=' + name + '&grade=' + grade + '&type=' + type + '&host=' + host + '&atnlcNo=' + atnlcNo + '&lctreSn=' + lctreSn + '&userSn=' + userSn
 
 
 driver = webdriver.Chrome(executable_path='chromedriver')
@@ -59,13 +59,12 @@ if x == 'start':
         print("id= " + random_id + " / name= " + name)
         # 신규 URL
         R_URL = link + '?email=' + random_id + '@ebsoc.co.kr' + '&id=' + random_id + '&integrationname=' + integrationname + '&name=' + name + '&grade=' + grade + '&type=' + type + '&host=' + host + '&atnlcNo=' + atnlcNo + '&lctreSn=' + lctreSn + '&userSn=' + userSn
-        driver.execute_script("window.open('" + R_URL + "','_blank')") # 새탭 오픈
+        driver.execute_script("window.open('" + "http://junu55792.dothome.co.kr/ebs/index.html" + "','_blank')") # 새탭 오픈
+        
+        driver.switch_to.window(driver.window_handles[-1]) # 탭 이동
 
-        if auto_entry == "yes": # 자동 입장이 설정되있는지 확인
-            driver.implicitly_wait(3)
-            element = driver.find_element_by_class_name('start-button-text')
-            element.click() # 입장 버튼 클릭
-
+        driver.implicitly_wait(3)
+        driver.find_element_by_class_name('start-button-text').click() # 입장 버튼 클릭
         index += 1 
 
 if x == 'end':
