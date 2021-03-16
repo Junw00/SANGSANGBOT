@@ -37,8 +37,8 @@
 	pip install selenium
 	pip install configparser
 	pip install random2
-
-## 할일
+	
+# 할일
 
 - [ ] 자동 입장 코드 수정 **(중요)**
 - [ ] 채팅 기능추가
@@ -46,7 +46,7 @@
 - [ ] IMGUI를 활용한 GUI 추가
 - [ ] 로그인 고급옵션 추가
 
-## 주의
+# 주의
 
 - 재미삼아 만들어보았습니다.
 - **본 코드로 인해 일어나는 불이익은 책임지지 않습니다.**
