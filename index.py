@@ -33,6 +33,8 @@ atnlcNo = config['OnLineClass']['atnlcNo']
 lctreSn = config['OnLineClass']['lctreSn']
 userSn = config['OnLineClass']['userSn']
 count = config['OnLineClass']['count']
+proxy = config['OnLineClass']['proxy']
+proxyurl = config['OnLineClass']['proxyurl']
 
 # count에 수를 string 에서 int로 변환
 n = int(count)
@@ -40,18 +42,19 @@ n = int(count)
 # URL 설정
 #URL = link + '?email=' + email + '&id=' + id + '&integrationname=' + integrationname + '&name=' + name + '&grade=' + grade + '&type=' + type + '&host=' + host + '&atnlcNo=' + atnlcNo + '&lctreSn=' + lctreSn + '&userSn=' + userSn
 
+
 driver = webdriver.Chrome(executable_path='chromedriver')
-driver.get("chrome://settings/content/camera")
+driver.get("file:///C:/Users/codn5/Downloads/um/EBS%20%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%81%B4%EB%9E%98%EC%8A%A4.html")
 
 driver.implicitly_wait(3)
 
-x = int(input()) # 입력받은 값을 변수에 저장
+x = str(input()) # 입력받은 값을 변수에 저장
 
 
 index = 0 # 몇번째 반복인지 기억하는 변수
 
 
-if x == 1:
+if x == 'start':
     while index < n:  # index 변수가 count 수 보다 작은 동안 반복
         random_id = ''.join([str(random.randint(0, 999)).zfill(3) for _ in range(2)])
         print("id= " + random_id + " / name= " + name)
@@ -60,6 +63,10 @@ if x == 1:
         driver.execute_script("window.open('" + R_URL + "','_blank')") # 새탭 오픈
         driver.implicitly_wait(3)
 
-        # 자동 입장 추가 필요
-        # 코드 수정중 ------
+        element = driver.find_element_by_class_name('start-button-text')
+        element.click() # 입장 버튼 클릭
+
         index += 1 
+
+if x == 'end':
+    driver.quit()
