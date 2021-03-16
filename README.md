@@ -28,7 +28,16 @@
 ### 엄준식, 참석 로그 도배
 ![preview](엄준식.PNG) ![preview](참석%20도배.png)
 
-# 할일
+# 사용법
+
+- python 3 설치필요
+
+### 필요한 모듈
+	pip install selenium
+	pip install configparser
+	pip install random2
+
+## 할일
 
 - [ ] 자동 입장 코드 수정 **(중요)**
 - [ ] 채팅 기능추가
@@ -42,8 +51,3 @@
 - **본 코드로 인해 일어나는 불이익은 책임지지 않습니다.**
 - 코드가 지저분합니다.
 - (신) 중학교 EBS온라인클래스에서만 테스트 되었습니다.
-
-## 정보
-
-- python 3
-- selenium , configparser , random 사용
