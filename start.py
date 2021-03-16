@@ -44,7 +44,7 @@ n = int(count)
 
 
 driver = webdriver.Chrome(executable_path='chromedriver')
-driver.get("file:///C:/Users/codn5/Downloads/um/EBS%20%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%81%B4%EB%9E%98%EC%8A%A4.html")
+driver.get("chrome://settings/content")
 
 driver.implicitly_wait(3)
 
