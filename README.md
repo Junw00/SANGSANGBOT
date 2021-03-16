@@ -30,7 +30,8 @@
 
 # 사용법
 
-- python 3 설치필요
+- python 3 설치필요 https://www.python.org/downloads/
+- 크롬 드라이버 필요 https://chromedriver.chromium.org/downloads/
 
 ### 필요한 모듈
 	pip install selenium
