@@ -61,5 +61,5 @@ if x == 1:
         driver.implicitly_wait(3)
 
         # 자동 입장 추가 필요
-
+        # 코드 수정중 ------
         index += 1 
